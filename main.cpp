@@ -2,6 +2,13 @@
 #include <cmath>
 using namespace std;
 
+/*
+    Hàm UCLN
+    Chức năng: tìm ước chung lớn nhất của hai số nguyên bằng thuật toán Euclid
+    Đầu vào: a, b hai số nguyên
+    Đầu ra: giá trị ước chung lớn nhất của a và b
+*/
+
 int UCLN(int a, int b){
     a = abs(a);
     b = abs(b);
@@ -13,6 +20,13 @@ int UCLN(int a, int b){
     return a;
 }
 
+/*
+    Hàm rút gọn phân số
+    Chức năng: rút gọn tử số và mẫu số của một phân số.
+    Đầu vào: tử, mẫu
+    Đầu ra: phân số đã rút gọn
+*/
+
 void rutgon(int &tu, int &mau){
     int uocchung = UCLN(tu, mau);
     tu /= uocchung;
@@ -23,10 +37,22 @@ void rutgon(int &tu, int &mau){
     }
 }
 
+/*
+    Cấu trúc phanso
+    Chức năng: lưu trữ một phân số gồm tử số và mẫu số
+*/
+
 struct phanso{
     int tuso;
     int mauso;
 };
+
+/*
+    Hàm main
+    Chức năng: nhập hai phân số và tính tổng, hiệu, tích, thương.
+    Đầu vào: hai phân số
+    Đầu ra: kết quả của bốn phép toán phân số
+*/
 
 int main(){
     phanso ps1, ps2;
